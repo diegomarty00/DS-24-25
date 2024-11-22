@@ -1,0 +1,63 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>440</x><y>160</y><w>210</w><h>120</h></coordinates><panel_attributes>Encuesta
+--
+- pregunta : String
+- si : int
+- no : int
+--
++ incrementarSi() : void
++ incrementarNo() : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>70</y><w>210</w><h>70</h></coordinates><panel_attributes>TextUserInterface
+--
+
+--
+rellena(encuesta : Encuesta) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>80</y><w>220</w><h>100</h></coordinates><panel_attributes>lt=.&gt;
+</panel_attributes><additional_attributes>10;20;200;20;200;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>150</x><y>200</y><w>210</w><h>70</h></coordinates><panel_attributes>Main
+--
+
+--
+_main(args : String[]) : void_</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>220</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=.&gt;
+</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>130</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=.&gt;
+</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>190</y><w>210</w><h>70</h></coordinates><panel_attributes>VoteObserver
+&lt;&lt;interface&gt;&gt;
+--
++ votoRecibido(encuesta : Encuesta)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>210</y><w>170</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=n
+</panel_attributes><additional_attributes>10;20;150;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>320</y><w>210</w><h>80</h></coordinates><panel_attributes>Activador
+--
+- cuentaAtras : int
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>320</y><w>210</w><h>80</h></coordinates><panel_attributes>Backup
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>420</y><w>210</w><h>80</h></coordinates><panel_attributes>GraficoCircular
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>520</y><w>210</w><h>80</h></coordinates><panel_attributes>GraficoDeBarras
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>420</y><w>210</w><h>80</h></coordinates><panel_attributes>Repetidor
+--
+- frecuencia : int
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>940</x><y>520</y><w>210</w><h>80</h></coordinates><panel_attributes>GuardarResultados
+--
+- frecuencia : int
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>640</y><w>210</w><h>80</h></coordinates><panel_attributes>LineaDeEstado
+--
+
+--
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>250</y><w>30</w><h>410</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;390</additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>250</y><w>70</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>50;10;50;110;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>250</y><w>70</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>50;10;50;210;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>850</x><y>250</y><w>70</w><h>330</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>50;10;50;310;10;310</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>250</y><w>70</w><h>330</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;310;50;310</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>250</y><w>70</w><h>230</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;210;50;210</additional_attributes></element><element><id>Relation</id><coordinates><x>890</x><y>250</y><w>70</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;110;50;110</additional_attributes></element><element><id>Relation</id><coordinates><x>990</x><y>210</y><w>240</w><h>180</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;220;20;220;160;160;160</additional_attributes></element><element><id>Relation</id><coordinates><x>990</x><y>220</y><w>240</w><h>260</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;10;220;10;220;240;160;240</additional_attributes></element></diagram>

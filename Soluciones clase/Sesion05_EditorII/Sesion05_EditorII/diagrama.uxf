@@ -1,0 +1,119 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>0</x><y>160</y><w>170</w><h>90</h></coordinates><panel_attributes>Main
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>330</y><w>170</w><h>130</h></coordinates><panel_attributes>TextModelInterface
+--
+- circulo : Herramienta
+- cuadrado : Herramienta
+- triangulo : Herramienta
+-in : BufferedReader
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>710</x><y>370</y><w>200</w><h>90</h></coordinates><panel_attributes>Dibujo
+--
+
+--
++ getFigura(x : int, y : int) : Figura
++ dibuja() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>330</y><w>220</w><h>130</h></coordinates><panel_attributes>Editor
+--
+
+--
+# createDefaultTool() : Herramienta
++ pinchar(x : int, y : int) : void
++ mover(x : int, y : int) : void
++ soltar(x : int, y : int) : void
++ dibujar() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>730</x><y>540</y><w>180</w><h>90</h></coordinates><panel_attributes>Figura
+&lt;&lt;interface&gt;&gt;
+--
++ dibujar() : void
++ contiene(x : int, y : int) : bool
++ mover(dx : int, dy : int) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>540</y><w>170</w><h>90</h></coordinates><panel_attributes>Herramienta
+&lt;&lt;interface&gt;&gt;
+--
++ pinchar(x : int, y : int) : void
++ mover(x : int, y : int) : void
++ soltar(x : int, y : int) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>780</y><w>270</w><h>90</h></coordinates><panel_attributes>/HerramientaCreacion/
+--
+- inicio : Point
+- fin : Point
+--
+/# doCreaFigura(inicio : Point, fin : Point) : Figura/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>670</y><w>270</w><h>90</h></coordinates><panel_attributes>HerramientaSeleccion
+--
+- inicio : Point
+- lastPoint : Point
+--
+- mueveIncremento(x : int, y : int) : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>70</x><y>240</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>400</y><w>300</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;280;20</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>450</y><w>60</w><h>110</h></coordinates><panel_attributes>lt=-
+
+actual</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>450</y><w>80</w><h>110</h></coordinates><panel_attributes>lt=-
+
+principal</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>450</y><w>40</w><h>110</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=1</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>480</x><y>570</y><w>270</w><h>120</h></coordinates><panel_attributes>lt=-
+
+seleccionada</panel_attributes><additional_attributes>250;20;10;20;10;100</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>620</y><w>50</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;100;30;100</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>620</y><w>50</w><h>220</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;200;30;200</additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>870</y><w>180</w><h>90</h></coordinates><panel_attributes>Circulo
+--
+- centro : Point
+- radio : int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>970</y><w>180</w><h>90</h></coordinates><panel_attributes>Cuadrado
+--
+- esquina : Point
+- ancho : int
+- altop : int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>1070</y><w>180</w><h>90</h></coordinates><panel_attributes>Triangulo
+--
+- v1 : Point
+- v2 : Point
+- v3 : Point
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>890</y><w>280</w><h>70</h></coordinates><panel_attributes>HerramientaCirculo
+--
+
+--
+# doCreaFigura(inicio : Point, fin : Point) : Figura
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>970</y><w>280</w><h>70</h></coordinates><panel_attributes>HerramientaCuadrado
+--
+
+--
+# doCreaFigura(inicio : Point, fin : Point) : Figura
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>340</x><y>1050</y><w>280</w><h>130</h></coordinates><panel_attributes>HerramientaTriangulo
+--
+- vertices : int
+- vertice : Point[]
+--
+# doCreaFigura(inicio : Point, fin : Point) : Figura
++ pinchar(x : int, y : int) : void
++ mover(x : int, y : int) : void
++ soltar(x : int, y : int) : void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>920</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>1000</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>610</x><y>1100</y><w>110</w><h>30</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>620</y><w>50</w><h>320</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>30;10;30;300;10;300</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>620</y><w>50</w><h>420</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>30;10;30;400;10;400</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>620</y><w>50</w><h>510</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>30;10;30;490;10;490</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>860</y><w>50</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70;30;70</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>860</y><w>50</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150;30;150</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>400</y><w>80</w><h>40</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;20;60;20</additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>620</y><w>90</w><h>510</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;490;70;490</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>110</y><w>220</w><h>80</h></coordinates><panel_attributes>Hisorial
+--
+
+--
++ undo() : void
++ redo() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>520</x><y>110</y><w>130</w><h>90</h></coordinates><panel_attributes>Cambio
+--
+
+--
++ undo() : void
++ redo() : void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>170</y><w>150</w><h>90</h></coordinates><panel_attributes>CambioCreacion
+--
+
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>860</x><y>170</y><w>150</w><h>90</h></coordinates><panel_attributes>CambioMovimiento
+--
+- dx : int
+- dy : int
+--
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>250</y><w>40</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=1</panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>900</x><y>250</y><w>90</w><h>370</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=1</panel_attributes><additional_attributes>60;10;60;340;10;340</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>130</y><w>320</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;300;10;300;40</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>130</y><w>160</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;140;10;140;40</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>140</y><w>110</w><h>40</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=1</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>310</x><y>180</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=-
+</panel_attributes><additional_attributes>10;150;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>430</x><y>190</y><w>170</w><h>390</h></coordinates><panel_attributes>lt=&lt;.</panel_attributes><additional_attributes>150;10;150;370;10;370</additional_attributes></element><element><id>Relation</id><coordinates><x>810</x><y>250</y><w>150</w><h>370</h></coordinates><panel_attributes>lt=-
+m1=n
+m2=1</panel_attributes><additional_attributes>10;10;10;90;130;90;130;340;100;340</additional_attributes></element></diagram>
